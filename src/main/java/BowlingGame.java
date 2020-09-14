@@ -1,3 +1,5 @@
+import exception.WrongKnockPointException;
+
 public class BowlingGame {
     int score=0;
     int turns=1;
@@ -41,6 +43,9 @@ public class BowlingGame {
         score+=nextKnockdownPoints;
         if(curKnockdownPoints+nextKnockdownPoints==10){
             score+=knockdownPoints[index+1];
+        }
+        if(curKnockdownPoints+nextKnockdownPoints>10){
+            throw new WrongKnockPointException();
         }
     }
 
