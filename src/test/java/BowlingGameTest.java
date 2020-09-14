@@ -30,7 +30,7 @@ public class BowlingGameTest {
     }
 
     @Test
-    void should_throw_WrongPointsArraySizeException_when_false__points_Array_Size_is_given() {
+    void should_throw_WrongPointsArraySizeException_when_false_points_array_size_is_given() {
         BowlingGame bowlingGame = new BowlingGame();
         int knockdownPoints[] = {10, 1, 1, 10, 10, 10, 10, 10, 10, 10, 2, 3, 1};
         Assertions.assertThrows(WrongPointsArraySizeException.class, () -> {
