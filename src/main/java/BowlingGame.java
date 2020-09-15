@@ -1,5 +1,6 @@
-import exception.WrongKnockPointException;
-import exception.WrongPointsArraySizeException;
+import exception.KnockPointException;
+import exception.PointsArraySizeException;
+
 
 public class BowlingGame {
     int score = 0;
@@ -31,7 +32,7 @@ public class BowlingGame {
         }
 
         if (lastIndex != knockdownPoints.length - 1) {
-            throw new WrongPointsArraySizeException();
+            throw new PointsArraySizeException();
         }
         return score;
     }
@@ -55,7 +56,7 @@ public class BowlingGame {
             lastIndex = index + 1;
         }
         if (curKnockdownPoints + nextKnockdownPoints > 10) {
-            throw new WrongKnockPointException();
+            throw new KnockPointException();
         }
     }
 
